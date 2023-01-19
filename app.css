@@ -1,0 +1,35 @@
+/** Custom CSS **/
+/* Please keep it alphabetical
+
+/* IDs */
+#footnote-row {
+    text-align: center;
+}
+
+#top-row {
+    text-align: center;
+}
+
+#xp-new {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Classes */
+.name {
+    text-align: left;
+}
+
+.table-entry {
+    border-bottom: 2px solid cornflowerblue;
+    margin-bottom: .5em;
+}
+
+.table-entry:hover {
+    border-bottom: 3px solid rgb(86, 133, 193);
+}
+
+.value {
+    text-align: right;
+}

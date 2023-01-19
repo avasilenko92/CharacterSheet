@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Character Sheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="app.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <!-- TODO Add navbar to save character, edit character, import charcter, and other stuff-->
+            <button class="btn btn-primary" onclick="document.getElementById('getFile').click()">Import Character</button>
+            <input type='file' id="getFile" style="display:none" onchange="handleFiles()">
+            <!-- content -->
+            <!-- main info-->
+            <div class="row" id="top-row">
+                <div class="col-12">
+                    <div>
+                        <h1 id="char-name">Character</h1>
+                    </div>
+                    <div>
+                        <h3 id="char-nickname">a.k.a. Snagglepuss</h2>
+                        </div>
+                    <div>
+                        <p>Power Level - <span id="top-row-power-level">0</span></p>
+                    </div>
+                    <div>
+                        <div>Currently <span id="suit-status-text">out of</span> <span id="suit-name">Waffle</span> <input id="in-suit" type="checkbox" onchange="updateSuitStatus()"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- main details-->
+            <div class="row" id="detail-row">
+                <!-- XP, pic, mech checkbox, crit stats, etc.-->
+                <div class="col-4">
+                    <div class="row">
+                        <!-- XP column -->
+                        <div class="col">
+                            <div class="row table-entry"><div class="col name">Total XP </div><div class="col value"><span id="xp-total">0</span></div></div>
+                            <div class="row table-entry"><div class="col name">XP Spent </div><div class="col value"><span id="xp-spent">0</span></div></div>
+                            <div class="row table-entry"><div class="col name">XP Remaining </div><div class="col value"><span id="xp-remaining">0</span></div></div>
+                            <form id="add-xp-form" onsubmit="addXP()">
+                                <input id="xp-new" type="number" placeholder="Add XP" on>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stats -->
+                <div class="col-4">
+                    <div>Filler Stats</div>
+                </div>
+                <!-- Inventory -->
+                <div class="col-4">
+                    <div>Filler Inventory</div>
+                </div>
+            </div>
+            <!-- less important details-->
+            <div class="row" id="footnote-row">
+                <div class="col-12">
+                    <div>Filler Footer</div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js" async defer></script>
+    </body>
+</html>
