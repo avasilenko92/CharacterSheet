@@ -1,5 +1,5 @@
 /** Custom CSS **/
-/* Please keep it alphabetical
+/* Please keep it organized by priority & alphabetical
 
 /* IDs */
 #footnote-row {
@@ -33,3 +33,6 @@
 .value {
     text-align: right;
 }
+
+
+/* Testing */

@@ -48,6 +48,10 @@ function addLogEntry() {
 }
 
 function addXP() {
+    if (charactersIndex === -1) {
+        alert('Please Load a Character')
+        return;
+    }
     let experience = document.getElementById("xp-new").value;
     //console.log(`New xp: ${xp}`);
     let tempChar = characters[charactersIndex];
@@ -109,7 +113,7 @@ function updateCharacterPage() {
     }
     document.getElementById("suit-name").innerText = characters[charactersIndex].suitName;
     document.getElementById("in-suit").checked = characters[charactersIndex].inSuit;
-    updateSuitStatus();    
+    updateSuitStatus();
     document.getElementById("xp-total").innerText = char.xp;
     document.getElementById("xp-spent").innerText = characters[charactersIndex].xpSpent;
     document.getElementById("xp-remaining").innerText = characters[charactersIndex].xp - characters[charactersIndex].xpSpent;
@@ -122,6 +126,7 @@ function updateCharacterPage() {
 }
 
 function updateSuitStatus() {
+    characters[charactersIndex].inSuit = document.getElementById("in-suit").checked;
     if (characters[charactersIndex].inSuit) {
         document.getElementById("suit-status-text").innerText = "in";
     } else {
@@ -135,6 +140,8 @@ document.getElementById('add-xp-form').addEventListener('submit', function(e) {
     document.getElementById('xp-new').value = "";
   });
 
+
+/* Testing Stuff */
 // Disables all form submits
 /*
 $(document).ready(function() {
