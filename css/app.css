@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+#profile-pic {
+    max-width: 300px;
+    max-height: 300px;
+}
+
 #top-row {
     text-align: center;
 }

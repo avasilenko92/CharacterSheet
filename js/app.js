@@ -1,6 +1,9 @@
 // app.js is only for application functions, variables, and objects. 
 // Any consistent data that would ideally be stored in a DB should be kept in data.js for now until an actual DB is setup
 
+
+// Global vars & objects
+
 let dataPresent = false;
 
 let charactersIndex = -1;
@@ -11,6 +14,7 @@ const char = {
     "id": 0,
     "name": "Character",
     "nickname": "Snagglepuss",
+    "profileImage": "images/1.png",
     "suitName": "Waffle",
     "inSuit": false,
     "xp": 0,
@@ -20,7 +24,6 @@ const char = {
     "stats": [],
     "inventory": []
 }
-
 
 let item = {
     "id": 0,
@@ -42,6 +45,19 @@ let stat = {
 let log = {
     "logEntries": []
 }
+
+
+
+// On Load
+
+window.onload=function() {
+    loadDefaultImage();
+}
+
+
+
+
+// Functions
 
 function addLogEntry() {
     alert('To be implemented')
@@ -95,6 +111,10 @@ function importCharacterData(data) {
     updateCharacterPage();
 }
 
+function loadDefaultImage() {
+    document.getElementById("profile-pic").src = 'images/' + (Math.floor(Math.random() * 5) + 1) + '.png';
+}
+
 
 function manipulateCSS() {
     if (dataPresent) {
@@ -135,12 +155,18 @@ function updateSuitStatus() {
     alert('To be fully implemented')
 }
 
+
+
+// Customized event Listeners
+
 document.getElementById('add-xp-form').addEventListener('submit', function(e) {
     e.preventDefault(); //to prevent form submission
     document.getElementById('xp-new').value = "";
   });
 
 
+
+  
 /* Testing Stuff */
 // Disables all form submits
 /*
@@ -152,3 +178,4 @@ $(document).ready(function() {
     });
   });
 */
+
