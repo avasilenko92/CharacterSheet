@@ -96,6 +96,7 @@ function importCharacterData(data) {
     let tempChar = char;
     tempChar.name = data.name;
     tempChar.nickname = data.nickname;
+    tempChar.profileImage = data.profileImage;
     tempChar.suitName = data.suitName;
     tempChar.inSuit = data.inSuit;
     tempChar.xp = data.xp;
@@ -130,6 +131,9 @@ function updateCharacterPage() {
         document.getElementById("char-nickname").innerText = "a.k.a " + characters[charactersIndex].nickname;
     } else {
         document.getElementById("char-nickname").innerText = "";
+    }
+    if (characters[charactersIndex].profileImage) {
+        document.getElementById("profile-pic").src = characters[charactersIndex].profileImage;
     }
     document.getElementById("suit-name").innerText = characters[charactersIndex].suitName;
     document.getElementById("in-suit").checked = characters[charactersIndex].inSuit;
@@ -166,7 +170,7 @@ document.getElementById('add-xp-form').addEventListener('submit', function(e) {
 
 
 
-  
+
 /* Testing Stuff */
 // Disables all form submits
 /*
