@@ -159,9 +159,11 @@ function updateCharacterPage() {
     */
     // Navbar changes
     if (characters.length === 1) {
-        document.getElementById("import-btn").innerText = '+';
+        document.getElementById("import-btn").innerText = characters[0].name + ' | +';
     } else if (characters.length > 1) {
-        // Show character dropdown
+        // Show character dropdown & hide import button
+        document.getElementById("import-btn").hidden = true;
+        document.getElementById("character-dropdown").hidden = false;
     }
 }
 

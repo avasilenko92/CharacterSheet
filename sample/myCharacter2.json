@@ -1,0 +1,48 @@
+{
+	"name": "War-Fartle",
+	"nickname": "Shainty Daint Walnut",
+	"profileImage": "https://drive.google.com/uc?export=view&id=1--kXwnp2C0O02MsENAwU5dwJC9fV9m3s",
+	"suitName": "Quatro Fleshies",
+	"inSuit": false,
+	"xp": 15,
+	"xpSpent": 9,
+	"damage": 0,
+	"energySpent": 0,
+	"inventory": [
+		{
+			"name": "Item2",
+			"power": 0,
+			"description": "None",
+			"type": "item",
+			"held": true,
+			"unique": false,
+			"owner": "Char-man",
+			"bonuses": []
+		},
+		{
+			"name": "Sword",
+			"power": "10",
+			"description": "Just a sword",
+			"type": "melee",
+			"held": false,
+			"unique": false,
+			"owner": "Other",
+			"bonuses": []
+		}
+	],
+	"archtype": "Meek",
+	"trait": [
+		{
+			"name": "Raised by assassins",
+			"tier": 1
+		},
+		{
+			"name": "Tortured Soul",
+			"tier": 2
+		},
+		{
+			"name": "Martial Artist",
+			"tier": 3
+		}
+	]
+}
