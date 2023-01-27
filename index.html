@@ -20,8 +20,12 @@
         <![endif]-->
         <div class="container">
             <!-- TODO Add navbar to save character, edit character, import charcter, and other stuff-->
-            <button class="btn btn-primary" onclick="document.getElementById('getFile').click()">Import Character</button>
-            <input type='file' id="getFile" style="display:none" onchange="handleFiles()">
+            <button id="import-btn" class="btn btn-primary" onclick="document.getElementById('importCharFile').click()">Import Character</button>            
+            <input type='file' id="importCharFile" style="display:none" onchange="importCharFile()">
+            <button id="export-btn" class="btn btn-primary" onclick="document.getElementById('exportCharFile').click()">Save Character</button>
+            <input type='file' id="exportCharFile" style="display:none" onchange="exportCharFile()">
+            <button id="export-all-btn" class="btn btn-primary" onclick="document.getElementById('exportAllCharsFile').click()">Save All Characters</button>
+            <input type='file' id="exportAllCharsFile" style="display:none" onchange="exportAllCharFiles()">
             <!-- content -->
             <!-- main info-->
             <div class="row" id="top-row">

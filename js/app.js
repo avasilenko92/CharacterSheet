@@ -1,9 +1,10 @@
 // app.js is only for application functions, variables, and objects. 
 // Any consistent data that would ideally be stored in a DB should be kept in data.js for now until an actual DB is setup
+// Please keep sections aplphabetical
 
-
-// Global vars & objects
-
+/************************
+ Global vars & objects
+************************/
 let dataPresent = false;
 
 let charactersIndex = -1;
@@ -48,17 +49,18 @@ let log = {
 
 
 
-// On Load
-
+/**********
+ On Load
+**********/
 window.onload=function() {
     loadDefaultImage();
 }
 
 
 
-
-// Functions
-
+/************
+ Functions
+************/
 function addLogEntry() {
     alert('To be implemented')
 }
@@ -77,8 +79,16 @@ function addXP() {
     characters[charactersIndex] = tempChar;
 }
 
-function handleFiles() {
-    const input = document.getElementById('getFile');
+function exportAllCharFiles() {
+
+}
+
+function exportCharFile() {
+
+}
+
+function importCharFile() {
+    const input = document.getElementById('importCharFile');
     const file = input.files[0];
     const reader = new FileReader();
     reader.onload = function(){
@@ -147,6 +157,12 @@ function updateCharacterPage() {
     Stats
     Inventory
     */
+    // Navbar changes
+    if (characters.length === 1) {
+        document.getElementById("import-btn").innerText = '+';
+    } else if (characters.length > 1) {
+        // Show character dropdown
+    }
 }
 
 function updateSuitStatus() {
@@ -160,9 +176,9 @@ function updateSuitStatus() {
 }
 
 
-
-// Customized event Listeners
-
+/****************************
+ Customized event Listeners
+*****************************/
 document.getElementById('add-xp-form').addEventListener('submit', function(e) {
     e.preventDefault(); //to prevent form submission
     document.getElementById('xp-new').value = "";
