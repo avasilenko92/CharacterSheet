@@ -80,11 +80,13 @@ function addXP() {
 }
 
 function exportAllCharFiles() {
-
+    const output = document.getElementById('exportAllCharFile');
+    alert('To be implemented')
 }
 
 function exportCharFile() {
-
+    const output = document.getElementById('exportCharFile');
+    alert('To be implemented')
 }
 
 function importCharFile() {
