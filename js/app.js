@@ -186,7 +186,7 @@ function updateSuitStatus() {
 document.getElementById('add-xp-form').addEventListener('submit', function(e) {
     e.preventDefault(); //to prevent form submission
     document.getElementById('xp-new').value = "";
-  });
+});
 
 
 
