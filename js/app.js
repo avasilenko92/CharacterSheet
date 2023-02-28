@@ -21,6 +21,7 @@ const char = {
     "xp": 0,
     "xpSpent": 0,
     "damage": 0,
+    "lifeBars": 1,
     "energySpent": 0,
     "stats": [],
     "inventory": []
