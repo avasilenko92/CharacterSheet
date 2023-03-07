@@ -2,6 +2,10 @@
 /* Please keep it organized by priority & alphabetical
 
 /* IDs */
+#content {
+    padding-top: 100px;
+}
+
 #footnote-row {
     text-align: center;
 }
@@ -38,6 +42,9 @@
 .value {
     text-align: right;
 }
+
+/*Elements*/
+
 
 
 /* Testing */
