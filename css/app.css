@@ -2,6 +2,10 @@
 /* Please keep it organized by priority & alphabetical
 
 /* IDs */
+#char-name {
+    font-weight: 700;
+}
+
 #content {
     padding-top: 100px;
 }
@@ -35,6 +39,10 @@
 
 
 /* Classes */
+.archetype-row {
+    margin-bottom: 2rem;
+}
+
 .name {
     text-align: left;
 }
@@ -57,7 +65,9 @@
 }
 
 /*Elements*/
-
+body {
+    background-color: rgb(245, 245, 245);
+}
 
 
 /* Testing */

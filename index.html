@@ -47,19 +47,41 @@
             <!-- main info-->
             <div class="row" id="top-row">
                 <div class="col-12">
-                    <div>
-                        <h1 id="char-name">Character</h1>
-                    </div>
-                    <div>
-                        <h3 id="char-nickname">a.k.a. Snagglepuss</h2>
+                    <div class="col-3">
+                        <div>
+                            <h1 id="char-name">Character</h1>
                         </div>
-                    <div>
-                        <p>Power Level - <span id="top-row-power-level">0</span></p>
+                        <div>
+                            <h3 id="char-nickname">a.k.a. Snagglepuss</h2>
+                            </div>
+                        <div>
+                            <p>Power Level - <span id="top-row-power-level">0</span></p>
+                        </div>
                     </div>
-                    <div>
-                        <img id="profile-pic" class="img-fluid" src="images/1.png">
+                    <div class="row">
+                        <div class="col-3">
+                            <img id="profile-pic" class="img-fluid" src="images/1.png">
+                        </div>
+                        <div class="col-2">
+                            <div class="row archetype-row">
+                                <h5>Archetype</h5>
+                                <div>Yada</div>
+                            </div>
+                            <div class="row">
+                                <h5>Traits</h5>
+                                <div>Funky</div>
+                                <div>Drunky</div>
+                                <div>Spunky</div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-3">
+                            <div class="row"><div>Health: 5/5</div></div>
+                            <div class="row"><div>Energy: 5/5</div></div>
+                            <div class="row"><div>Hunger: 5/5</div></div>
+                        </div>
                     </div>
-                    <div id="suit-row">Currently <span id="suit-status-text">out of</span> <span id="suit-name">Waffle</span> <input id="in-suit" type="checkbox" onchange="updateSuitStatus()"></div>
+                    <div id="suit-row" class="col-3">Currently <span id="suit-status-text">out of</span> <span id="suit-name">Waffle</span> <input id="in-suit" type="checkbox" onchange="updateSuitStatus()"></div>
                 </div>
             </div>
             <!-- main details-->
