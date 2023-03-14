@@ -30,6 +30,10 @@
     text-align: left;
 }
 
+.nav-button {
+    margin: 0 10px;
+}
+
 .table-entry {
     border-bottom: 2px solid cornflowerblue;
     margin-bottom: .5em;
