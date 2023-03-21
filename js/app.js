@@ -64,7 +64,7 @@ function addXP() {
 }
 
 function closeCharacter() {
-
+    alert('To be implemented')
 }
 
 function exportAllCharFiles() {
@@ -125,7 +125,7 @@ function loadDefaultImage() {
 }
 
 function login() {
-
+    alert('To be implemented')
 }
 
 function manipulateCSS() {
