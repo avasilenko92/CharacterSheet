@@ -1,6 +1,6 @@
 // app.js is only for application functions, variables, and objects. 
 // Any consistent data that would ideally be stored in a DB should be kept in data.js for now until an actual DB is setup
-// Please keep sections aplphabetical
+// Please keep each section aplphabetical
 
 /************************
  Global vars & objects
@@ -10,22 +10,6 @@ let dataPresent = false;
 let charactersIndex = -1;
 let characters = [];
 
-
-const char = {
-    "id": 0,
-    "name": "Character",
-    "nickname": "Snagglepuss",
-    "profileImage": "images/1.png",
-    "suitName": "Waffle",
-    "inSuit": false,
-    "xp": 0,
-    "xpSpent": 0,
-    "damage": 0,
-    "lifeBars": 1,
-    "energySpent": 0,
-    "stats": [],
-    "inventory": []
-}
 
 let item = {
     "id": 0,
@@ -39,15 +23,14 @@ let item = {
     "bonuses": []
 }
 
-let stat = {
-    "name": "stat",
-    "rank": 0
-}
-
 let log = {
     "logEntries": []
 }
 
+let stat = {
+    "name": "stat",
+    "rank": 0
+}
 
 
 /**********
@@ -80,6 +63,10 @@ function addXP() {
     characters[charactersIndex] = tempChar;
 }
 
+function closeCharacter() {
+
+}
+
 function exportAllCharFiles() {
     const output = document.getElementById('exportAllCharFile');
     alert('To be implemented')
@@ -106,7 +93,9 @@ function importCharFile() {
 
 function importCharacterData(data) {
     //New object in characters array
-    let tempChar = char;
+    //let tempChar = char;
+    let tempChar = {};
+
     tempChar.name = data.name;
     tempChar.nickname = data.nickname;
     tempChar.profileImage = data.profileImage;
@@ -116,6 +105,12 @@ function importCharacterData(data) {
     tempChar.xpSpent = data.xpSpent;
     tempChar.damage = data.damage;
     tempChar.energySpent = data.energySpent;
+    tempChar.archtype = data.archtype;
+    tempChar.traits = [];
+    for (let item of data.traits) {
+        tempChar.traits.push(item);
+    }
+    tempChar.inventory = [];
     for (let item of data.inventory) {
         tempChar.inventory.push(item);
     }
@@ -129,6 +124,9 @@ function loadDefaultImage() {
     document.getElementById("profile-pic").src = 'images/' + (Math.floor(Math.random() * 5) + 1) + '.png';
 }
 
+function login() {
+
+}
 
 function manipulateCSS() {
     if (dataPresent) {
@@ -151,9 +149,14 @@ function updateCharacterPage() {
     document.getElementById("suit-name").innerText = characters[charactersIndex].suitName;
     document.getElementById("in-suit").checked = characters[charactersIndex].inSuit;
     updateSuitStatus();
-    document.getElementById("xp-total").innerText = char.xp;
+    document.getElementById("xp-total").innerText = characters[charactersIndex].xp;
     document.getElementById("xp-spent").innerText = characters[charactersIndex].xpSpent;
     document.getElementById("xp-remaining").innerText = characters[charactersIndex].xp - characters[charactersIndex].xpSpent;
+    document.getElementById("archtype").innerText = characters[charactersIndex].archtype;
+    for (let item of characters[charactersIndex].traits) {
+        document.getElementById(`trait-${item.tier}`).innerText = characters[charactersIndex].traits[item.tier - 1].name;
+    }
+    
     /* TODO
     Add damage and health (Need to calculate max)
     Add energy spent and total (Need to calculate max)

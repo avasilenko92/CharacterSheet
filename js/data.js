@@ -31,6 +31,15 @@ const mechSkillMap = {
     intelligence: ["Medicine", "Operation", "Artillery", "Engineering", "Knowledge", "Cunning"]
 }
 
+const archtypes = {
+    meek: {
+
+    },
+    underdog: {
+
+    }
+}
+
 
 
 /************

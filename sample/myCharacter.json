@@ -32,7 +32,7 @@
 		}
 	],
 	"archtype": "Meek",
-	"trait": [
+	"traits": [
 		{
 			"name": "Raised by assassins",
 			"tier": 1
