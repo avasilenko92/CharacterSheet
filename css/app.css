@@ -15,8 +15,8 @@
 }
 
 #profile-pic {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 #suit-name {
@@ -47,8 +47,11 @@
     text-align: left;
 }
 
-.nav-button {
-    margin: 0 10px;
+.nav-li {
+    color: white;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .table-entry {

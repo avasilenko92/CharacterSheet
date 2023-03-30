@@ -64,7 +64,24 @@ function addXP() {
 }
 
 function closeCharacter() {
-    alert('To be implemented')
+    if (charactersIndex === -1) {
+        alert('No character selected. Please select a character')
+    } else {
+        let confirmation = confirm('Close this character? All unsaved progress will be lost')
+        if (confirmation == true) {
+            characters.splice(charactersIndex, 1);
+            if (characters.length > 0) {
+                charactersIndex = 0;
+                updateCharacterPage();
+            } else {
+                charactersIndex = -1;
+                document.getElementById('char-name').innerText = 'Unknown';
+                document.getElementById('char-nickname').innerText = 'a.k.a Mysterio'
+            }
+            updateNavBar();
+        }
+
+    }
 }
 
 function exportAllCharFiles() {
@@ -171,6 +188,17 @@ function updateCharacterPage() {
         document.getElementById("import-btn").hidden = true;
         document.getElementById("character-dropdown").hidden = false;
     }
+}
+
+function updateNavBar() {
+    // TODO
+    if (characters.length === 0) {
+        document.getElementById('import-btn').innerText = 'Import Character';
+    }
+    // If 0 char default import button, hide save buttons, display create char button, hide close char button
+    // If 1 or 0 char hide save all characters
+    // If 1 char update Import button to single name w/ +
+    // If > 1 char update dropdown, hide single import
 }
 
 function updateSuitStatus() {

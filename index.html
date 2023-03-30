@@ -20,27 +20,27 @@
         <![endif]-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <ul class="navbar-nav">
-                <button id="import-btn" class="btn btn-secondary nav-button" onclick="document.getElementById('importCharFile').click()">Import Character</button>            
+                <li id="import-btn" class="nav-li" onclick="document.getElementById('importCharFile').click()">Import Character</li>            
                 <input type='file' id="importCharFile" style="display:none" onchange="importCharFile()">
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle nav-button" type="button" id="character-dropdown" data-toggle="dropdown" hidden="true">
-                    Dropdown button
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li class="dropdown-toggle nav-li" type="button" id="character-dropdown" data-toggle="dropdown" hidden="true">
+                    Dropdown item
+                    </li>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLi">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </div>
-                <button id="export-btn" class="btn btn-secondary nav-button" onclick="document.getElementById('exportCharFile').click()">Save Character</button>
+                <li id="export-btn" class="nav-li" onclick="document.getElementById('exportCharFile').click()">Save Character</li>
                 <input type='file' id="exportCharFile" style="display:none" onchange="exportCharFile()">
-                <button id="export-all-btn" class="btn btn-secondary nav-button" onclick="document.getElementById('exportAllCharsFile').click()">Save All Characters</button>
+                <li id="export-all-btn" class="nav-li" onclick="document.getElementById('exportAllCharsFile').click()">Save All Characters</li>
                 <input type='file' id="exportAllCharsFile" style="display:none" onchange="exportAllCharFiles()">
-                <button id="close-character" class="btn btn-secondary nav-button" onclick="closeCharacter()">Close This Character</button>
+                <li id="close-character" class="nav-li" onclick="closeCharacter()">Close This Character</li>
             </ul>
             <ul class="navbar-nav ms-auto">
-                <button id="update" class="btn btn-secondary nav-button" onclick="location.href='https://github.com/avasilenko92/CharacterSheet/archive/refs/heads/main.zip'">Download Latest</button>
-                <button id="login" class="btn btn-secondary nav-button" onclick="login()">Login</button>
+                <li id="update" class="nav-li" onclick="location.href='https://github.com/avasilenko92/CharacterSheet/archive/refs/heads/main.zip'">Download Latest</li>
+                <li id="login" class="nav-li" onclick="login()">Login</li>
             </ul>
         </nav>
         <div class="container" id="content">
@@ -88,7 +88,7 @@
             <!-- main details-->
             <div class="row" id="detail-row">
                 <!-- XP, pic, mech checkbox, crit stats, etc.-->
-                <div class="col-4">
+                <div class="col-3">
                     <div class="row">
                         <!-- XP column -->
                         <div class="col">
@@ -100,14 +100,21 @@
                             </form>
                         </div>
                     </div>
+                    <div class="row">
+                        Filler Vitals
+                    </div>
+                    <div class="row">
+                        Filler Inventory
+                    </div>
                 </div>
                 <!-- Stats -->
-                <div class="col-4">
+                <div class="col-5">
                     <div>Filler Stats</div>
                 </div>
                 <!-- Inventory -->
-                <div class="col-4">
-                    <div>Filler Inventory</div>
+                <div class="col-3">
+                    <div class="row">Filler Notes</div>
+                    <div class="row">Filler Log</div>
                 </div>
             </div>
             <!-- less important details-->
